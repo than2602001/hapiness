@@ -34,7 +34,7 @@ export default function FloatingContact() {
       >
         {/* Facebook Messenger */}
         <a
-          href="https://m.me/happinessbeauty"
+          href="https://www.facebook.com/share/1CNjwJoRNT/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-3"
@@ -51,7 +51,7 @@ export default function FloatingContact() {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/84357276916?text=Xin%20ch%C3%A0o%2C%20t%C3%B4i%20mu%E1%BB%91n%20%C4%91%E1%BA%B7t%20l%E1%BB%8Bch%20t%E1%BA%A1i%20Happiness%20Beauty"
+          href="https://wa.me/+84357276916?text=Xin%20ch%C3%A0o%2C%20t%C3%B4i%20mu%E1%BB%91n%20%C4%91%E1%BA%B7t%20l%E1%BB%8Bch%20t%E1%BA%A1i%20Happiness%20Beauty"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-3"
