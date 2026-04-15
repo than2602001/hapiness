@@ -1,5 +1,5 @@
 "use client";
-import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, PhoneIcon, ClockIcon } from "@heroicons/react/24/outline";
 import SectionTitle from "./SectionTitle";
 import { useLang } from "./LangProvider";
 
@@ -36,15 +36,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 min-w-[48px] bg-gold/10 rounded-full flex items-center justify-center">
-                  <EnvelopeIcon className="w-5 h-5 text-gold-dark" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-brown-deep mb-1">Email</h4>
-                  <a href="mailto:hoangvun168168@gmail.com" className="text-sm text-gold-dark font-medium hover:underline">hoangvun168168@gmail.com</a>
-                </div>
-              </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 min-w-[48px] bg-gold/10 rounded-full flex items-center justify-center">

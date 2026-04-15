@@ -158,19 +158,40 @@ export default function Services() {
           desc={t("services.desc")}
         />
 
-        <div className="mb-8 md:mb-10 -mx-4 md:mx-0">
-          <div className="flex md:flex-wrap md:justify-center gap-2 px-4 md:px-0 overflow-x-auto scrollbar-hide pb-2 md:pb-0">
+        {/* Mobile: vertical grid tabs + table below | Desktop: horizontal tabs */}
+        <div className="md:hidden mb-6">
+          <div className="grid grid-cols-2 gap-2 px-1">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`inline-flex items-center gap-1.5 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                className={`flex items-center gap-2 px-3.5 py-3 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                  active === tab.id
+                    ? "bg-gradient-to-r from-gold to-gold-dark text-white shadow-[0_4px_16px_rgba(196,163,90,0.25)]"
+                    : "bg-white text-brown-medium border border-gold/12 hover:border-gold/30"
+                }`}
+              >
+                <tab.Icon className={`w-4 h-4 shrink-0 ${active === tab.id ? "text-white" : "text-gold-dark"}`} />
+                <span className="truncate">{tab.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: horizontal tabs */}
+        <div className="hidden md:block mb-10">
+          <div className="flex flex-wrap justify-center gap-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActive(tab.id)}
+                className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-medium transition-all cursor-pointer whitespace-nowrap ${
                   active === tab.id
                     ? "bg-gradient-to-r from-gold to-gold-dark text-white shadow-[0_4px_24px_rgba(196,163,90,0.25)]"
                     : "bg-white text-brown-medium border border-gold/15 hover:border-gold/40"
                 }`}
               >
-                <tab.Icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                <tab.Icon className="w-4 h-4" />
                 {tab.label}
               </button>
             ))}
